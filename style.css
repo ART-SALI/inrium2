@@ -45,7 +45,7 @@ header{
     top: 0;
     width: 100%;
     padding: 0 72px;
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
     align-content: center;
     background: var(--header-backgraund);
@@ -107,7 +107,7 @@ header .navigation a{
     letter-spacing: 1px;
     padding: 2px 15px;
     height: 27px;
-    border-radius: 27px;
+    border-radius: 16px;
     font-size: 16px;
     background-size: 27px;
     justify-content: center;
@@ -183,11 +183,13 @@ footer{
     margin-right: 48px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 24px;
     grid-auto-rows: minmax(100px, auto);
 }
 
 .about-us-info-card{
     padding: 24px;
+    align-content: center;
     text-align-all: center;
     margin: 24px;
     font-size: 20px;
@@ -209,7 +211,6 @@ footer{
     margin-right: 72px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: minmax(100px, auto);
 }
 
 .text-footer{
@@ -276,6 +277,8 @@ footer{
 }
 
 .icons-column{
+    color: black;
+    font-size: 60px;
     margin-top: 24px;
     display: grid;
     grid-template-columns: 1fr;
@@ -283,9 +286,476 @@ footer{
 }
 
 .icons-column a{
+    color: black;
     width: 80px;
 }
 
 .icons-column:last-child a{
     justify-self: flex-end;
+}
+
+@media (max-width: 1024px) {
+
+
+    header{
+        height: 72px;
+        justify-content: space-between;
+    }
+
+    header .navigation{
+        justify-content: right;
+        height: 72px;
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    header .navigation a{
+        height: 47px;
+        font-size: 14px;
+        justify-content: right;
+    }
+
+    header .logo{
+        height: 72px;
+
+    }
+
+    header .contacts{
+        display: none;
+
+        margin-left: -400px;
+    }
+    
+    .big-logo{
+        margin-right: -350px;
+    }
+    
+    .title-card{
+        width: 463px;
+    }
+
+    .last-button{
+        width: 350px;
+        height: 95px;
+        align-content: center;
+    }
+
+    .last-button a{
+        width: 350px;
+        height: 95px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .last-title{
+        height: 68px;
+        width: 350px;
+    }
+
+    .text-footer{
+        margin-right: 12px;
+        margin-left: 12px;
+    }
+    
+    footer{
+        height: 60px;
+    }
+
+    .last-frame{
+        height:500px;
+    }
+
+    @media (max-width: 920px) {
+
+        .last-button{
+            width: 312px;
+            height: 82px;
+        }
+
+        .last-button a{
+            width: 312px;
+            height: 82px;
+            font-size: 30px;
+        }
+
+        .last-title{
+            height: 58px;
+            font-size: 36px;
+            width: 312px;
+        }
+
+        .about-us-info-card{
+            margin-left: 0;
+            font-size: 18px;
+            padding: 22px;
+            margin-right: 0;
+        }
+        
+        .icons-column:last-child{
+            display: none;
+            margin: -1000px;
+        }
+
+        .list-cards-grid{
+            grid-template-columns: 1fr 13fr;
+        }
+
+        .last-frame{
+            height:484px;
+        }
+
+
+    }
+
+    @media (max-width: 860px) {
+
+        .about-us-info-card{
+            font-size: 16px;
+            padding: 18px;
+        }
+
+        .last-frame{
+            height:402px;
+        }
+
+    }
+
+
+    @media (max-width: 780px) {
+
+        .last-frame{
+            height:364px;
+        }
+
+
+        header .navigation a{
+            font-size: 12px;
+            padding-right: 2px;
+            padding-left: 2px;
+        }
+        .big-logo{
+            display: none;
+            margin-right: -1000px;
+        }
+
+        .footer-grid{
+            height: 25px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .text-footer{
+            margin: 0;
+            font-size: 12px;
+            height: 30px;
+        }
+
+        .text-footer#id-2{
+            text-align: right;
+        }
+
+        .text-footer#id-3{
+            text-align: left;
+        }
+
+        .last-button{
+            width: 268px;
+            height: 82px;
+        }
+
+        .last-button a{
+            width: 268px;
+            height: 82px;
+            font-size: 28px;
+        }
+
+        .last-title{
+            font-size: 32px;
+            width: 268px;
+            height: 50px;
+        }
+
+
+    }
+
+    @media (max-width: 660px) {
+        header .navigation a:not(:last-child){
+            display: none;
+            margin-right: -100px;
+        }
+
+        .last-frame{
+            height:312px;
+        }
+
+        .last-button{
+            width: 224px;
+            height: 82px;
+        }
+
+        .last-button a{
+            width: 224px;
+            height: 68px;
+            font-size: 22px;
+        }
+
+        .last-title{
+            height: 46px;
+            font-size: 26px;
+            width: 224px;
+        }
+
+    }
+
+    @media (max-width: 560px) {
+
+        .last-frame{
+            height:298px;
+            display: block;
+            direction: unset;
+            justify-content: space-around;
+            align-content: center;
+        }
+
+        .last-group{
+            width: 20%;
+            margin-left: 40%;
+            margin-right: 40%;
+            direction: unset;
+            display: grid;
+            grid-template-columns: 1fr;
+            place-self: center;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            justify-items: center;
+
+        }
+
+        .last-button{
+            margin-top: 8px;
+            width: 224px;
+            height: 82px;
+            margin-bottom: 82px;
+        }
+
+        .last-button a{
+            width: 224px;
+            height: 68px;
+            font-size: 22px;
+        }
+
+        .last-title{
+            height: 46px;
+            font-size: 26px;
+            width: 224px;
+        }
+
+        .about-us-info-card{
+            font-size: 14px;
+            padding: 14px;
+        }
+
+        .title-card{
+            align-content: center;
+            height: 45px;
+            width: 245px;
+        }
+
+        .title-card h2{
+            height: 45px;
+            font-size: 32px;
+        }
+
+        header{
+            height: 42px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .info-cards-grid{
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+        .list-cards-grid{
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+        
+        .list-cards-grid .icons-column{
+            font-size: 32px;
+            grid-auto-rows: minmax(40px, 80px);
+        }
+
+        .list-cards-grid .icons-column a{
+            width: 32px;
+            height: 30px;
+        }
+
+        .footer-grid{
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+        .content{
+            justify-content: unset;
+            padding: 0;
+        }
+
+        .main-page{
+            margin-top: 42px;
+        }
+
+
+        .info-card h2{
+            font-size: 30px;
+        }
+
+        .common-text{
+            font-size: 14px;
+            text-align: justify;
+        }
+
+        .find-party-button{
+            height: 32px;
+            font-size: 26px;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+        .main-page .main-action-button{
+            margin-top: 0;
+            padding-top: 4px;
+            padding-bottom: 6px;
+            background: var(--card-backgraund);
+            height: 36px;
+        }
+
+        header .logo{
+            height: 42px;
+        }
+
+        header .navigation{
+            height: 42px;
+        }
+
+        header .navigation a{
+            height: 19px;
+        }
+
+        .text-footer{
+            font-size: 12px;
+        }
+
+        @media(max-width: 420px) {
+
+            .last-button{
+                width: 236px;
+                height: 50px;
+            }
+
+            .last-button a{
+                width: 206px;
+                height: 50px;
+                font-size: 20px;
+                padding-left: 20px;
+                padding-right: 20px;
+                text-align: center;
+            }
+
+            .last-title{
+                padding-top: 8px;
+                align-self: center;
+                height: 30px;
+                font-size: 17px;
+                width: 180px;
+            }
+
+
+            .last-frame{
+                height:264px;
+            }
+
+            .about-us-info-card{
+                font-size: 12px;
+                padding: 10px;
+            }
+
+            .title-card{
+                align-content: center;
+                height: 24px;
+                width: 152px;
+            }
+
+            .title-card h2{
+                height: 24px;
+                font-size: 15px;
+            }
+
+            .info-card h2{
+                font-size: 22px;
+            }
+
+            .common-text{
+                font-size: 10px;
+            }
+
+            .find-party-button{
+                font-size: 18px;
+                height: 28px;
+            }
+
+            .text-footer{
+                font-size: 10px;
+            }
+
+            @media(max-width: 320px) {
+
+                .last-button{
+                    width: 216px;
+                    height: 38px;
+                }
+
+                .last-button a{
+                    width: 216px;
+                    height: 38px;
+                    font-size: 16px;
+                    padding-right: 14px;
+                    padding-left: 14px;
+                    padding-top: 6px;
+                }
+
+                .last-title{
+                    padding-top: 4px;
+                    height: 24px;
+                    font-size: 15px;
+                    width: 152px;
+                }
+
+                .last-frame{
+                    height:214px;
+                }
+
+                header .navigation a{
+                    font-size: 10px;
+                }
+
+                .about-us-info-card{
+                    font-size: 10px;
+                    padding: 8px;
+                }
+                
+                .find-party-button{
+                    font-size: 14px;
+                }
+                
+                .text-footer{
+                    font-size: 8px;
+                }
+            }
+
+        }
+
+    }
+
 }
